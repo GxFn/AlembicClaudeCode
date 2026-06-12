@@ -4,7 +4,7 @@ This repository is the **Claude Code** distribution shell for the Alembic
 plugin. Its sibling, [AlembicCodex](https://github.com/GxFn/AlembicCodex),
 is the Codex distribution shell. Each shell owns exactly one host
 (per-host shells, user decision 2026-06-12); the actual runtime is the
-pinned npm package `@gxfn/alembic-runtime`, bootstrapped by
+pinned npm package `@gxfn/alembic-runtime@0.2.0`, bootstrapped by
 `bin/alembic-start.mjs`.
 
 ## Layout (official Claude Code plugin format)
