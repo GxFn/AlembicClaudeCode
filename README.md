@@ -19,6 +19,22 @@ pinned npm package `@gxfn/alembic-codex-runtime`, bootstrapped by
 - `bin/alembic-codex-start.mjs` — runtime bootstrap: ensures the pinned
   npm runtime in a writable cache, then execs the MCP server over stdio.
 
+## Install from the marketplace
+
+This repo doubles as its own marketplace (`.claude-plugin/marketplace.json`
+at the repo root, the spec-default hosting shape; the plugin entry uses the
+`github` source type pointing back at this repo):
+
+```bash
+claude plugin marketplace add GxFn/AlembicClaudeCode
+claude plugin install alembic-codex@gxfn
+```
+
+Alternatives considered and not used: a relative `"./"` self-source (works
+only for git-cloned marketplace adds and makes the cache copy carry the
+marketplace file ambiguity) and a separate catalog repo (an extra repo to
+maintain for a single plugin). Revisit when more plugins join the catalog.
+
 ## Try it locally
 
 ```bash
