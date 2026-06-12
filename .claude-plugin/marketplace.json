@@ -6,14 +6,21 @@
   "description": "Alembic plugins for Claude Code: local-first project memory, Recipes, and Guard checks.",
   "plugins": [
     {
-      "name": "alembic-codex",
+      "name": "alembic",
       "source": {
         "source": "github",
         "repo": "GxFn/AlembicClaudeCode"
       },
       "description": "Local-first project memory, Recipes, Guard checks, and recoverable bootstrap jobs.",
       "category": "productivity",
-      "keywords": ["mcp", "project-memory", "guard", "recipes", "knowledge-base", "local-first"]
+      "keywords": [
+        "mcp",
+        "project-memory",
+        "guard",
+        "recipes",
+        "knowledge-base",
+        "local-first"
+      ]
     }
   ]
 }

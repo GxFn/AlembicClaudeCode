@@ -1,7 +1,7 @@
 {
-  "name": "alembic-codex",
+  "name": "alembic",
   "version": "0.2.0",
-  "description": "Local-first project memory, Recipes, Guard checks, and recoverable bootstrap jobs for Codex.",
+  "description": "Local-first project memory, Recipes, Guard checks, and recoverable bootstrap jobs.",
   "author": {
     "name": "gaoxuefeng",
     "url": "https://github.com/GxFn/Alembic"
@@ -11,7 +11,6 @@
   "license": "MIT",
   "keywords": [
     "coding",
-    "codex",
     "mcp",
     "project-memory",
     "guard",
@@ -25,7 +24,9 @@
   "mcpServers": {
     "alembic": {
       "command": "node",
-      "args": ["${CLAUDE_PLUGIN_ROOT}/bin/alembic-codex-start.mjs"],
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/bin/alembic-codex-start.mjs"
+      ],
       "cwd": "${CLAUDE_PLUGIN_ROOT}",
       "env": {
         "ALEMBIC_CHANNEL_ID": "codex",

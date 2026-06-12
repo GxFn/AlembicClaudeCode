@@ -4,7 +4,7 @@ This repository is the **Claude Code** distribution shell for the Alembic
 plugin. Its sibling, [AlembicCodex](https://github.com/GxFn/AlembicCodex),
 is the Codex distribution shell. Each shell owns exactly one host
 (per-host shells, user decision 2026-06-12); the actual runtime is the
-pinned npm package `@gxfn/alembic-codex-runtime`, bootstrapped by
+pinned npm package `@gxfn/alembic-runtime`, bootstrapped by
 `bin/alembic-codex-start.mjs`.
 
 ## Layout (official Claude Code plugin format)
@@ -15,7 +15,7 @@ pinned npm package `@gxfn/alembic-codex-runtime`, bootstrapped by
   session cwd, so relative paths do not resolve.
 - `skills/` — five skills (`alembic`, `alembic-create`, `alembic-guard`,
   `alembic-recipes`, `alembic-structure`), auto-discovered at the plugin
-  root and namespaced as `alembic-codex:<skill>`.
+  root and namespaced as `alembic:<skill>`.
 - `bin/alembic-codex-start.mjs` — runtime bootstrap: ensures the pinned
   npm runtime in a writable cache, then execs the MCP server over stdio.
 
@@ -27,7 +27,7 @@ at the repo root, the spec-default hosting shape; the plugin entry uses the
 
 ```bash
 claude plugin marketplace add GxFn/AlembicClaudeCode
-claude plugin install alembic-codex@gxfn
+claude plugin install alembic@gxfn
 ```
 
 Alternatives considered and not used: a relative `"./"` self-source (works
