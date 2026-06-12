@@ -6,12 +6,12 @@
   "sourceRepo": "GxFn/Alembic",
   "sourcePath": "plugins/alembic-claude-code",
   "runtimePackage": "@gxfn/alembic-runtime@0.2.0",
-  "shellEntry": "bin/alembic-codex-start.mjs",
+  "shellEntry": "bin/alembic-start.mjs",
   "manifest": ".claude-plugin/plugin.json",
   "provenance": {
     "decision": "Per-host plugin shells (user decision 2026-06-12): AlembicCodex repo is Codex-only; this repo owns the Claude Code plugin.",
     "initialContent": "Functional artifacts (.claude-plugin/plugin.json, bin/, skills/, LICENSE) are byte-identical copies of the CC1-verified AlembicCodex shell commit 05802b1, which passed claude plugin validate --strict and a live scratch-profile load (5 skills, stdio MCP, 26 tools).",
     "syncRule": "Shared functional content (bin/ bootstrap, skill bodies, runtime pin) is edited where the change originates and mirrored manually to the sibling shell until a cross-shell drift gate exists. Owner: AlembicPlugin window. Drift check: deferred to the CC2 distribution sub-wave together with the marketplace decision; until then any cross-shell edit must name both shells in its commit message.",
-    "hostWordingDebt": "Distribution name unified to alembic (user ruling C2, 2026-06-13, N1 wave). Remaining wording debt: skill bodies and the bin/alembic-codex-start.mjs filename plus lib/codex internals stay for CC3/SN5 per ruling D5/D6."
+    "hostWordingDebt": "Distribution name unified to alembic (N1, ruling C2) and the shell entry renamed to bin/alembic-start.mjs with lib/codex -> lib/runtime in the parent (SN5, ruling D10). Remaining wording debt: skill bodies still say Codex (owned by CC3)."
   }
 }

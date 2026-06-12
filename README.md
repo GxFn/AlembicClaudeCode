@@ -5,7 +5,7 @@ plugin. Its sibling, [AlembicCodex](https://github.com/GxFn/AlembicCodex),
 is the Codex distribution shell. Each shell owns exactly one host
 (per-host shells, user decision 2026-06-12); the actual runtime is the
 pinned npm package `@gxfn/alembic-runtime`, bootstrapped by
-`bin/alembic-codex-start.mjs`.
+`bin/alembic-start.mjs`.
 
 ## Layout (official Claude Code plugin format)
 
@@ -16,7 +16,7 @@ pinned npm package `@gxfn/alembic-runtime`, bootstrapped by
 - `skills/` — five skills (`alembic`, `alembic-create`, `alembic-guard`,
   `alembic-recipes`, `alembic-structure`), auto-discovered at the plugin
   root and namespaced as `alembic:<skill>`.
-- `bin/alembic-codex-start.mjs` — runtime bootstrap: ensures the pinned
+- `bin/alembic-start.mjs` — runtime bootstrap: ensures the pinned
   npm runtime in a writable cache, then execs the MCP server over stdio.
 
 ## Install from the marketplace
