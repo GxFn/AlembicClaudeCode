@@ -35,6 +35,17 @@ only for git-cloned marketplace adds and makes the cache copy carry the
 marketplace file ambiguity) and a separate catalog repo (an extra repo to
 maintain for a single plugin). Revisit when more plugins join the catalog.
 
+### If the MCP server does not connect on first use
+
+Claude Code negative-caches a failed MCP start in
+`<config>/mcp-needs-auth-cache.json` and silently skips the server on later
+sessions. If the very first connect failed (for example the pinned runtime was
+not yet reachable), clear that negative cache once after the cause is fixed —
+either run `/mcp` and choose **Reconnect** for the `alembic` server, or delete
+`mcp-needs-auth-cache.json` under your Claude Code config directory and start a
+new session. The runtime is pinned to an exact version
+(`@gxfn/alembic-runtime@0.2.0`); reconnecting reuses the same pin.
+
 ## Try it locally
 
 ```bash
