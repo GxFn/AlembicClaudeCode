@@ -29,8 +29,7 @@
       ],
       "cwd": "${CLAUDE_PLUGIN_ROOT}",
       "env": {
-        "ALEMBIC_CHANNEL_ID": "codex",
-        "ALEMBIC_PLUGIN_HOST": "codex",
+        "ALEMBIC_PLUGIN_HOST": "claude-code",
         "ALEMBIC_CODEX_ENABLE_ADMIN": "0",
         "ALEMBIC_CODEX_MCP_MODE": "1",
         "ALEMBIC_CODEX_PLUGIN_ROOT": "${CLAUDE_PLUGIN_ROOT}",
