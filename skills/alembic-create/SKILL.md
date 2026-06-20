@@ -1,6 +1,6 @@
 ---
 name: alembic-create
-description: Submit new Alembic knowledge candidates from Codex when the user explicitly asks, or proactively only when the current project has a project-level Alembic knowledge skill or local Alembic knowledge base. Covers `alembic_submit_knowledge`, V3 fields, batch rules, and review boundaries.
+description: Submit new Alembic knowledge candidates from Claude Code when the user explicitly asks, or proactively only when the current project has a project-level Alembic knowledge skill or local Alembic knowledge base. Covers `alembic_submit_knowledge`, V3 fields, batch rules, and review boundaries.
 ---
 
 # Alembic Create
@@ -77,4 +77,4 @@ Batch submission is stricter than a single entry. If the response reports reject
 
 ## Boundaries
 
-Do not publish or deprecate Recipes from the default Codex plugin tier. Candidate submission is allowed; lifecycle changes belong to the Dashboard or admin mode.
+Do not publish or deprecate Recipes from the default Claude Code plugin tier. Candidate submission is allowed; lifecycle changes belong to the Dashboard or admin mode.
