@@ -97,7 +97,7 @@ function buildLaunchPlan(input) {
     ALEMBIC_CODEX_RUNTIME_PACKAGE_SPECIFIER: RUNTIME_PACKAGE_SPECIFIER,
     ALEMBIC_MCP_MODE: '1',
     ALEMBIC_MCP_TIER: input.env.ALEMBIC_MCP_TIER || 'agent',
-    ALEMBIC_PLUGIN_HOST: input.env.ALEMBIC_PLUGIN_HOST || 'codex',
+    ALEMBIC_PLUGIN_HOST: input.env.ALEMBIC_PLUGIN_HOST || 'claude-code',
     ALEMBIC_RUNTIME_MODE: input.env.ALEMBIC_RUNTIME_MODE || 'plugin',
   };
 
