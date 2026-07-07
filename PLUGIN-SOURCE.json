@@ -1,11 +1,11 @@
 {
   "generatedAt": "2026-06-12T07:05:00.000Z",
-  "package": "@gxfn/alembic-runtime@0.2.0",
+  "package": "@gxfn/alembic-runtime@0.3.0",
   "plugin": "alembic",
   "host": "claude-code",
   "sourceRepo": "GxFn/Alembic",
   "sourcePath": "plugins/alembic-claude-code",
-  "runtimePackage": "@gxfn/alembic-runtime@0.2.0",
+  "runtimePackage": "@gxfn/alembic-runtime@0.3.0",
   "shellEntry": "bin/alembic-start.mjs",
   "manifest": ".claude-plugin/plugin.json",
   "provenance": {

@@ -4,7 +4,7 @@ This repository is the **Claude Code** distribution shell for the Alembic
 plugin. Its sibling, [AlembicCodex](https://github.com/GxFn/AlembicCodex),
 is the Codex distribution shell. Each shell owns exactly one host
 (per-host shells, user decision 2026-06-12); the actual runtime is the
-pinned npm package `@gxfn/alembic-runtime@0.2.0`, bootstrapped by
+pinned npm package `@gxfn/alembic-runtime@0.3.0`, bootstrapped by
 `bin/alembic-start.mjs`.
 
 ## Layout (official Claude Code plugin format)
@@ -44,7 +44,7 @@ not yet reachable), clear that negative cache once after the cause is fixed —
 either run `/mcp` and choose **Reconnect** for the `alembic` server, or delete
 `mcp-needs-auth-cache.json` under your Claude Code config directory and start a
 new session. The runtime is pinned to an exact version
-(`@gxfn/alembic-runtime@0.2.0`); reconnecting reuses the same pin.
+(`@gxfn/alembic-runtime@0.3.0`); reconnecting reuses the same pin.
 
 ## Try it locally
 
