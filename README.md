@@ -46,6 +46,16 @@ either run `/mcp` and choose **Reconnect** for the `alembic` server, or delete
 new session. The runtime is pinned to an exact version
 (`alembic-runtime@0.3.0`); reconnecting reuses the same pin.
 
+## Security
+
+This plugin is a lightweight distribution shell, not the runtime itself. A security scan will flag `bin/alembic-start.mjs` for using `node:child_process` (`spawn` / `spawnSync`). That usage is deliberate, minimal, and limited to running one specific, version-pinned, publicly published package — never arbitrary or user-supplied code:
+
+- **Runtime install** — on first use the shell runs `npm install alembic-runtime@0.3.0` into a local startup cache. It ships no runtime files (no `runtime.tgz`, `runtime/`, or `node_modules/`) so the marketplace artifact stays small and within risk limits; the runtime is fetched from the public npm registry as a fixed `name@version`.
+- **Runtime launch** — it then starts the cached runtime's MCP entrypoint with Node. The installed package **name and version are validated against `alembic-runtime@0.3.0` before launch**; a mismatch aborts instead of executing.
+- **npm preflight** — a `npm --version` check only produces a clear error when npm is missing.
+
+There is no `eval`, no remote code beyond the pinned npm install, and Ghost mode keeps the footprint minimal until you explicitly request project knowledge, Guard, Dashboard, or bootstrap workflows. This lightweight-shell + pinned-runtime pattern is the standard way to distribute a larger MCP runtime through the marketplace without embedding it in the plugin artifact. Each `bin/alembic-start.mjs` call site is annotated inline with the same rationale.
+
 ## Try it locally
 
 ```bash
